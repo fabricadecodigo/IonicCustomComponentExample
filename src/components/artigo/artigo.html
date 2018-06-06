@@ -1,0 +1,14 @@
+<ion-card>
+  <ion-item>
+    <h2>{{ artigo.autor }}</h2>
+    <p>{{ artigo.data }}</p>
+  </ion-item>
+
+  <img src="{{ artigo.imgUrl }}" />
+  <ion-card-content>
+    <ion-card-title text-wrap>
+      {{ artigo.titulo }}
+    </ion-card-title>
+    <div text-wrap [innerHTML]=artigo.texto></div>
+  </ion-card-content>
+</ion-card>

@@ -1,14 +1,30 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Fábrica de Código</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let artigo of artigos" (click)="abrirArtigo(artigo)">
+      <!-- Componente criado  -->
+      <artigo [artigo]="artigo"></artigo>
+
+      <!--<ion-card>
+        Código sem componente
+        <ion-item>
+          <h2>{{ artigo.autor }}</h2>
+          <p>{{ artigo.data }}</p>
+        </ion-item>
+
+        <img src="{{ artigo.imgUrl }}" />
+        <ion-card-content>
+          <ion-card-title text-wrap>
+            {{ artigo.titulo }}
+          </ion-card-title>
+          <div text-wrap [innerHTML]=artigo.texto></div>
+        </ion-card-content>
+      </ion-card> -->
+    </button>
+  </ion-list>
 </ion-content>
